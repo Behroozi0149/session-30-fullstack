@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("novin.first.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1635118f477b40309b1930b0179d4cea017a62a")]
 [assembly: System.Reflection.AssemblyProductAttribute("novin.first.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("novin.first.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

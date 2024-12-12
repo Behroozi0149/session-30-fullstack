@@ -156,3 +156,4 @@ C:\programing\fullstack.projects\session30\novin.first.API\bin\Debug\net9.0\runt
 C:\programing\fullstack.projects\session30\novin.first.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\programing\fullstack.projects\session30\novin.first.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\programing\fullstack.projects\session30\novin.first.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\programing\fullstack.projects\session30\novin.first.API\obj\Debug\net9.0\novin.first.API.sourcelink.json
