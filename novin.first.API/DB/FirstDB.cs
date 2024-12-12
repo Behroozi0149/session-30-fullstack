@@ -15,7 +15,7 @@ namespace novin.first.API.DB
         public FirstDB(DbContextOptions options)
             : base(options)
         {
-            
+
         }
         // }
     }

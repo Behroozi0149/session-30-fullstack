@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace novin.first.API.Entities
 {
+    // منظور کسی است که کتاب را قرض گرفته است
     public class Student
     {
         public int Id { get; set; }

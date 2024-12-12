@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using novin.first.API.DB;
 using novin.first.API.Entities;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -18,7 +19,6 @@ builder.Services.AddCors(Options =>
         .AllowAnyOrigin();
     });
 });
-// Student
 var app = builder.Build();
 app.UseCors();
 if (app.Environment.IsDevelopment())
@@ -27,6 +27,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseHttpsRedirection();
+
+// Student
 app.MapPost("student/add", (FirstDB db, Student Student) =>
 {
     db.Students.Add(Student);
@@ -50,22 +52,23 @@ object value = app.MapPost("student/remove/{id}", (FirstDB db, int id) =>
         db.SaveChanges();
     }
 });
+
 // Libary
-app.MapPost("Libary/add", (FirstDB db, Student Student) =>
+app.MapPost("libary/add", (FirstDB db, Student Student) =>
 {
     db.Students.Add(Student);
     db.SaveChanges();
 });
-app.MapPost("Libary/list", (FirstDB db) =>
+app.MapPost("libary/list", (FirstDB db) =>
 {
     return db.Students.ToList();
 });
-app.MapPost("Libary/update", (FirstDB db, Student User) =>
+app.MapPost("libary/update", (FirstDB db, Student User) =>
 {
     db.Students.Update(User);
     db.SaveChanges();
 });
-app.MapPost("Libary/remove/{id}", (FirstDB db, int id) =>
+app.MapPost("libary/remove/{id}", (FirstDB db, int id) =>
 {
     var student = db.Students.Find(id);
     if (student != null)
@@ -74,4 +77,5 @@ app.MapPost("Libary/remove/{id}", (FirstDB db, int id) =>
         db.SaveChanges();
     }
 });
+
 app.Run();
