@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "novin.first.sln"
+    "dotnet.defaultSolution": "novin.first.sln",
+    "intellicode-completions-cdk.loggingLevel": "ALL"
 }

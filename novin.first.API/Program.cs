@@ -29,21 +29,21 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Student
-app.MapPost("student/add", (FirstDB db, Student Student) =>
+app.MapPost("students/add", (FirstDB db, Student Student) =>
 {
     db.Students.Add(Student);
     db.SaveChanges();
 });
-app.MapPost("student/list", (FirstDB db) =>
+app.MapPost("students/list", (FirstDB db) =>
 {
     return db.Students.ToList();
 });
-app.MapPost("student/update", (FirstDB db, Student User) =>
+app.MapPost("students/update", (FirstDB db, Student User) =>
 {
     db.Students.Update(User);
     db.SaveChanges();
 });
-object value = app.MapPost("student/remove/{id}", (FirstDB db, int id) =>
+object value = app.MapPost("students/remove/{id}", (FirstDB db, int id) =>
 {
     var student = db.Students.Find(id);
     if (student != null)
@@ -54,21 +54,21 @@ object value = app.MapPost("student/remove/{id}", (FirstDB db, int id) =>
 });
 
 // Libary
-app.MapPost("libary/add", (FirstDB db, Student Student) =>
+app.MapPost("/libary/add", (FirstDB db, Libary libary) =>
 {
-    db.Students.Add(Student);
+    db.Libary.Add(libary);
     db.SaveChanges();
 });
-app.MapPost("libary/list", (FirstDB db) =>
+app.MapPost("/libary/list", (FirstDB db) =>
 {
     return db.Students.ToList();
 });
-app.MapPost("libary/update", (FirstDB db, Student User) =>
+app.MapPost("/libary/update", (FirstDB db, Student User) =>
 {
     db.Students.Update(User);
     db.SaveChanges();
 });
-app.MapPost("libary/remove/{id}", (FirstDB db, int id) =>
+app.MapPost("/libary/remove/{id}", (FirstDB db, int id) =>
 {
     var student = db.Students.Find(id);
     if (student != null)
